@@ -4,20 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Map Art Creator</title>
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Defer both scripts -->
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    defer
-  ></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
-  <div id="map"></div>
+  <header class="header">
+    <h1>Map Art Creator</h1>
+  </header>
+
+  <main class="app">
+    <aside class="sidebar">
+      <h2>Layers</h2>
+      <button id="btnToner">Toner Background</button><br>
+      <button id="btnTonerLite">Toner Lite</button><br>
+      <button id="btnTerrain">Terrain</button><br>
+      <button id="btnWatercolor">Watercolor</button>
+
+      <h2>Paper Size</h2>
+      <button id="btnA4">A4</button><br>
+      <button id="btnA3">A3</button><br>
+      <button id="btnToggleBorder">Toggle Border</button><br>
+
+      <h2>Markers</h2>
+      <button id="btnRemoveMarker">Remove Marker</button>
+    </aside>
+
+    <div class="page a4-page" id="pageDiv">
+      <div id="map"></div>
+      <div class="map-gradient-overlay"></div>
+      <div class="map-title-overlay"></div>
+      <h1 class="map-title">My Map Title</h1>
+    </div>
+
+  </main>
 </body>
 </html>
